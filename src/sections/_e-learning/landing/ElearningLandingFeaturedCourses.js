@@ -1,67 +1,66 @@
-import PropTypes from 'prop-types';
-import { useRef } from 'react';
+import PropTypes from "prop-types";
+import { useRef } from "react";
 // @mui
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 // hooks
-import useResponsive from 'src/hooks/useResponsive';
+import useResponsive from "src/hooks/useResponsive";
 // components
-import Carousel, { CarouselArrows } from 'src/components/carousel';
+import Carousel, { CarouselArrows } from "src/components/carousel";
 //
 
 // @mui
-import { Container, Stack, Typography, Box, Button } from '@mui/material';
+import { Container, Stack, Typography, Box, Button } from "@mui/material";
 // routes
 
 // utils
 
 // components
 
-import './elearningLandingFeaturedCourses.style.css';
-import { ElearningCourseItem } from '../course/item';
-import img1 from '../../../_mock/assets/course/course_1.jpg';
-import img2 from '../../../_mock/assets/course/course_2.jpg';
-import img3 from '../../../_mock/assets/course/course_3.jpg';
-import img4 from '../../../_mock/assets/course/course_4.jpg';
-import img5 from '../../../_mock/assets/course/course_5.jpg';
+import "./elearningLandingFeaturedCourses.style.css";
+import { ElearningCourseItem } from "../course/item";
+import img1 from "../../../_mock/assets/course/course_1.jpg";
+import img2 from "../../../_mock/assets/course/course_2.jpg";
+import img3 from "../../../_mock/assets/course/course_3.jpg";
+import img4 from "../../../_mock/assets/course/course_4.jpg";
+import img5 from "../../../_mock/assets/course/course_5.jpg";
 
 // ----------------------------------------------------------------------
 
 const myProjects = [
   {
-    title: 'Car Dealership',
-    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTL4ZW14DDKjvK8ozSb7A4s%2FDEALERSHIP%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-20557%26viewport%3D543%252C361%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A20557%26mode%3Ddesign',
+    title: "Car Dealership",
+    url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTL4ZW14DDKjvK8ozSb7A4s%2FDEALERSHIP%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D5-20557%26viewport%3D543%252C361%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D5%253A20557%26mode%3Ddesign",
     img: img1,
-    alt: 'chicago bakes',
+    alt: "chicago bakes",
     description: `The Figma Car Dealership project is a digital design I created. It's all about a car dealership website I made, and let me tell you, it's super cool. The design is sleek and easy to use, with a modern look and feel. I focused on creating a visually appealing and user-friendly interface for automotive businesses. It's a great example of my skills in action!`,
   },
   {
-    title: 'Daycare',
-    url: 'https://helenlucydaycare.netlify.app/',
+    title: "Silkway Marathon",
+    url: "",
     img: img2,
-    alt: 'daycare',
-    description: `
-    The React and MUI Daycare project is a portfolio gem, showcasing my frontend skills. It's about a cute daycare site made with React and MUI. Trust me, it's user-friendly and visually charming. With a playful design, I aimed for an enjoyable experience for parents and kids.  It's proof of my ability to blend creativity and functionality for engaging childcare interfaces.`,
+    alt: "marathon",
+    description: `The Silk Way Marathon offers a variety of race distances to accommodate participants of all fitness levels and interests, including 5km, 10km, and 15km routes. These shorter distances provide opportunities for both seasoned runners looking for a quick challenge and beginners seeking to experience the excitement of a marathon event.`,
   },
   {
-    title: 'Online Store',
-    url: 'https://myperfectstore.netlify.app/',
+    title: "Chicago Bakes",
+    url: "https://dev--dev-chicagobakes.netlify.app/",
+    img: img3,
+    alt: "",
+    description:
+      "Stepping into a Chicago bakery is like entering a haven of indulgence, where the aroma of sweet treats fills the air. A flaky croissant, or a decadent slice of cheesecake, you are sure to find something to satisfy your cravings. After all, in a city known for its culinary prowess, indulging in a freshly baked treat is practically a rite of passage.",
+  },
+  {
+    title: "Online Store",
+    url: "https://myperfectstore.netlify.app/",
     img: img4,
-    alt: 'online store',
+    alt: "online store",
     description: `This Online Store project is a standout addition to my portfolio, showcasing my frontend skills. It revolves around an elegant online store I developed using React. Rest assured, it boasts a user-friendly interface and visually appealing aesthetics. With a contemporary design, I strived to create an immersive shopping experience for customers.`,
   },
   {
-    title: 'Spy Game',
-    url: 'https://spygame.netlify.app/',
-    img: img3,
-    alt: 'spy game',
-    description:
-      'The Spy Game project is an exciting addition to my portfolio, highlighting my coding skills. It revolves around a thrilling spy-themed game that I developed. It promises an immersive experience, keeping players on the edge of their seats. With clever coding techniques and attention to detail, I aimed to create an engaging and suspenseful gameplay.',
-  },
-  {
-    title: 'Weather App',
-    url: 'https://weatherappsh.netlify.app/',
+    title: "Weather App",
+    url: "https://weatherappsh.netlify.app/",
     img: img5,
-    alt: 'weather app',
+    alt: "weather app",
     description: `The React Weather App project is a standout in my portfolio, showcasing my frontend skills. It's a dynamic weather application built with React, featuring a user-friendly design and real-time weather information from an API. This project demonstrates my ability to create intuitive and informative apps with a blend of creativity and functionality.`,
   },
 ];
@@ -69,7 +68,7 @@ const myProjects = [
 export default function ElearningLandingFeaturedCourses({ courses }) {
   const theme = useTheme();
 
-  const isMdUp = useResponsive('up', 'md');
+  const isMdUp = useResponsive("up", "md");
 
   const carouselRef = useRef(null);
 
@@ -77,7 +76,7 @@ export default function ElearningLandingFeaturedCourses({ courses }) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    rtl: Boolean(theme.direction === 'rtl'),
+    rtl: Boolean(theme.direction === "rtl"),
     responsive: [
       {
         breakpoint: theme.breakpoints.values.lg,
@@ -105,24 +104,26 @@ export default function ElearningLandingFeaturedCourses({ courses }) {
       }}
     >
       <Stack
-        direction={{ xs: 'column', md: 'row' }}
-        alignItems={{ md: 'flex-end' }}
+        direction={{ xs: "column", md: "row" }}
+        alignItems={{ md: "flex-end" }}
         sx={{
-          textAlign: { xs: 'center', md: 'unset' },
+          textAlign: { xs: "center", md: "unset" },
         }}
       >
         <Stack spacing={3} flexGrow={1}>
           <Typography variant="h2">My projects</Typography>
         </Stack>
 
-        {isMdUp && <CarouselArrows spacing={2} onNext={handleNext} onPrev={handlePrev} />}
+        {isMdUp && (
+          <CarouselArrows spacing={2} onNext={handleNext} onPrev={handlePrev} />
+        )}
       </Stack>
 
       <Box
         sx={{
-          position: 'relative',
+          position: "relative",
           ml: { md: -2 },
-          width: { md: 'calc(100% + 32px)' },
+          width: { md: "calc(100% + 32px)" },
         }}
       >
         <CarouselArrows
@@ -132,20 +133,20 @@ export default function ElearningLandingFeaturedCourses({ courses }) {
             sx: {
               left: -16,
               opacity: 1,
-              color: 'common.white',
-              bgcolor: 'primary.main',
-              '&:hover': { bgcolor: 'primary.dark' },
-              ...(isMdUp && { display: 'none' }),
+              color: "common.white",
+              bgcolor: "primary.main",
+              "&:hover": { bgcolor: "primary.dark" },
+              ...(isMdUp && { display: "none" }),
             },
           }}
           rightButtonProps={{
             sx: {
               right: -16,
               opacity: 1,
-              color: 'common.white',
-              bgcolor: 'primary.main',
-              '&:hover': { bgcolor: 'primary.dark' },
-              ...(isMdUp && { display: 'none' }),
+              color: "common.white",
+              bgcolor: "primary.main",
+              "&:hover": { bgcolor: "primary.dark" },
+              ...(isMdUp && { display: "none" }),
             },
           }}
         >
@@ -163,12 +164,19 @@ export default function ElearningLandingFeaturedCourses({ courses }) {
                 <div className="projects__container">
                   <img src={proj.img} alt={proj.alt} />
                   <Typography
-                    sx={{ color: 'text.secondary', paddingTop: '1rem', paddingBottom: '2rem' }}
+                    sx={{
+                      color: "text.secondary",
+                      paddingTop: "1rem",
+                      paddingBottom: "2rem",
+                    }}
                   >
                     {proj.description}
                   </Typography>
                   <Button variant="outlined" size="large" color="inherit">
-                    <a href={proj.url} style={{ textDecoration: 'none', color: 'black' }}>
+                    <a
+                      href={proj.url}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
                       View the project
                     </a>
                   </Button>
