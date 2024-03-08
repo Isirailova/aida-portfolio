@@ -46,7 +46,7 @@ export default function Footer() {
           sx={{ py: 3, textAlign: "center" }}
         >
           <Typography variant="caption" sx={{ color: "text.secondary" }}>
-            © 2023. All rights reserved by Shahzod Oripov
+            © 2023. All rights reserved by Aida Isirailova
           </Typography>
         </Stack>
       </Container>
