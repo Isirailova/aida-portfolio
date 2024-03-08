@@ -81,7 +81,10 @@ export default function ElearningLandingHero() {
                   Hi!
                   <Box
                     component="span"
-                    sx={{ color: "primary.main", marginRight: "50px" }}
+                    sx={{
+                      color: "primary.main",
+                      marginRight: "60px",
+                    }}
                   >
                     {` I'm Aida`}
                   </Box>

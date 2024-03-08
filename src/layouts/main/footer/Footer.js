@@ -1,6 +1,6 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 // @mui
-import { Stack, Divider, Container, Typography } from '@mui/material';
+import { Stack, Divider, Container, Typography } from "@mui/material";
 // hooks
 // _mock
 // components
@@ -20,12 +20,16 @@ export default function Footer() {
 
   // const renderLists = isMdUp ? desktopList : mobileList;
 
-  const isHome = pathname === '/';
+  const isHome = pathname === "/";
 
   const simpleFooter = (
-    <Container sx={{ py: 8, textAlign: 'center' }}>
-      <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
-        © 2023. All rights reserved by Shah Oripov
+    <Container sx={{ py: 8, textAlign: "center" }}>
+      <Typography
+        variant="caption"
+        component="div"
+        sx={{ color: "text.secondary" }}
+      >
+        © 2023. All rights reserved by Aida Isirailova
       </Typography>
     </Container>
   );
@@ -37,11 +41,11 @@ export default function Footer() {
       <Container>
         <Stack
           spacing={2.5}
-          direction={{ xs: 'column', md: 'row' }}
+          direction={{ xs: "column", md: "row" }}
           justifyContent="space-around"
-          sx={{ py: 3, textAlign: 'center' }}
+          sx={{ py: 3, textAlign: "center" }}
         >
-          <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+          <Typography variant="caption" sx={{ color: "text.secondary" }}>
             © 2023. All rights reserved by Shahzod Oripov
           </Typography>
         </Stack>
