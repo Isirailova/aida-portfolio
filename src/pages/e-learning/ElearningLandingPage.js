@@ -1,11 +1,11 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 // sections
-import { ElearningLandingView } from 'src/sections/_e-learning/view';
+import { ElearningLandingView } from "src/sections/_e-learning/view";
 
 // ----------------------------------------------------------------------
 
 export default function ElearningLandingPage() {
-  const title = `Shah's Portfolio`;
+  const title = `Aida's Portfolio`;
   return (
     <>
       <Helmet>
