@@ -36,7 +36,7 @@ const myProjects = [
   },
   {
     title: "Silkway Marathon",
-    url: "",
+    url: "https://silkway-marathon.netlify.app",
     img: img2,
     alt: "marathon",
     description: `The Silk Way Marathon offers a variety of race distances to accommodate participants of all fitness levels and interests, including 5km, 10km, and 15km routes. These shorter distances provide opportunities for both seasoned runners looking for a quick challenge and beginners seeking to experience the excitement of a marathon event.`,
